@@ -1,0 +1,2843 @@
+<html>
+  <head>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+      @charset "UTF-8";
+
+      .ng-cloak,
+      .x-ng-cloak,
+      .ng-hide:not(.ng-hide-animate) {
+        display: none !important;
+      }
+      ng\:form {
+        display: block;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>Pay with IndiaMART</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=.90, maximum-scale=.90"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <style>
+      @font-face {
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-weight: normal;
+        src: url("../fonts/fontawesome-webfont.eot") format("embedded-opentype"),
+          url("../fonts/fontawesome-webfont.woff") format("woff"),
+          url("../fonts/fontawesome-webfont.ttf") format("truetype"),
+          url("../fonts/fontawesome-webfont.svg") format("svg");
+      }
+      @font-face {
+        font-family: "ocraregular";
+        font-style: normal;
+        font-weight: normal;
+        src: url("../fonts/ocra-webfont.eot?#iefix") format("embedded-opentype"),
+          url("../fonts/ocra-webfont.woff") format("woff"),
+          url("../fonts/ocra-webfont.ttf") format("truetype"),
+          url("../fonts/ocra-webfont.svg#ocraregular") format("svg");
+      }
+    </style>
+
+    <!-- GTM -->
+  </head>
+  <body style="">
+    <!-- GTM -->
+
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <a class="close" href="JavaScript:Void(0);" onclick="closePop()">×</a>
+        <div class="content"></div>
+      </div>
+    </div>
+    <div class="wapper">
+      <!-- Main Wapper Satrt-->
+
+      <div
+        class="hdLk"
+        style="
+          padding: 10px;
+          background-color: white;
+          border-bottom: 1px solid #9e9e9e;
+          overflow: auto;
+          box-shadow: 0px 1px 1px #9e9e9e;
+          transform: translateZ(10px);
+          margin-bottom: 20px;
+        "
+      >
+        <div class="hdlft">
+          <a style="color: #000000; font-size: 28px">
+            <img
+              src="https://pay.imimg.com/img/pwim/pwiLogo.png"
+              style="
+                height: auto;
+                width: 20%;
+                float: right;
+                background-color: white;
+              "
+              alt=""
+            />
+            <img
+              src=""
+              id="supplierLogo"
+              style="
+                float: left;
+                max-width: 7%;
+                height: auto;
+                padding-right: 15px;
+                background-color: white;
+                display: none;
+              "
+              alt=""
+            />
+            <span
+              id="companyName"
+              class="companyName"
+              style="
+                background-color: white;
+                display: block;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 800px;
+                white-space: nowrap;
+              "
+              >Manish Food Products</span
+            >
+            <div
+              style="
+                font-size: 18px;
+                color: #949591;
+                font-weight: 400;
+                background-color: white;
+              "
+              id="cityState"
+            >
+            
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Header Div End-->
+      <!-- ngView:  -->
+      <div data-ng-view="" class="ng-scope">
+        <style class="ng-scope">
+          .safari .serviceList {
+            margin-top: -40px !important;
+          }
+
+          optgroup[label="Debit"] {
+            display: none;
+            visibility: hidden;
+          }
+
+          input::-webkit-calendar-picker-indicator {
+            display: none;
+          }
+        </style>
+
+        <style class="ng-scope">
+          .trust_p {
+            max-width: 1000px;
+            margin: 20px auto;
+            overflow: hidden;
+          }
+
+          .trust_1,
+          .trust_2 {
+            color: #3c8a40;
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+            font-weight: 700;
+            float: left;
+          }
+
+          .trust_1 {
+            font-size: 13px;
+            text-align: center;
+            top: 8px;
+            position: relative;
+          }
+
+          .trust_1 img {
+            width: 30px;
+            margin-right: 10px;
+          }
+
+          .trust_1 span {
+            vertical-align: top;
+            display: inline-block;
+            width: 135px;
+            text-align: left;
+          }
+
+          .trust_2 {
+            border-left: 1px solid #9e9e9e;
+            box-sizing: border-box;
+            position: relative;
+            left: -62px;
+          }
+
+          #cardlessEmiOptions .activeBank {
+            box-shadow: none;
+            border: 1px solid #999;
+          }
+
+          #cardlessEmiOptions .activeBank .css-label {
+            background-position: 0 -22px;
+          }
+
+          .cardlessEmiErr {
+            clear: both;
+            text-align: center;
+            color: red;
+          }
+
+          #payuUPI .activeBank,
+          #payuWallet .activeBank {
+            box-shadow: none;
+            border: 1px solid #999;
+          }
+
+          #payuUPI .activeBank .css-label,
+          #payuWallet .activeBank .css-label {
+            background-position: 0 -22px;
+          }
+
+          .bharatqrpgErr {
+            clear: both;
+            text-align: center;
+            color: red;
+          }
+          /* mintifi box */
+          .mintifibx ul li {
+            cursor: pointer;
+            display: block;
+            float: left;
+            list-style-type: none;
+            margin: 0 1.4% 3%;
+            padding: 8px;
+            line-height: 23px;
+            width: 44%;
+            text-align: center;
+            background: none;
+            border: none;
+            box-shadow: none;
+            font-size: 15px;
+            font-weight: bold;
+          }
+          .mintifibx ul li label.css-label {
+            background-image: url(https://pay.imimg.com/img/radio1.png);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            width: 23px;
+            float: none;
+            display: inline-block;
+            margin-right: 5px;
+          }
+          .mintifibx ul li:hover .css-label,
+          .mintifibx ul li.active .css-label {
+            background-position: 0 -23px !important;
+          }
+
+          .citibnk {
+            background-image: url(https://pay.imimg.com/img/citi-logo.png);
+            float: left;
+            height: 25px;
+            width: 105px;
+            display: block;
+            background-repeat: no-repeat;
+            margin-top: 0;
+            background-position: 13px 3px;
+            background-size: 53%;
+          }
+
+          .cbibnk {
+            background-image: url(https://pay.imimg.com/img/pwim/emi/CentralBankOfIndia.png);
+            float: left;
+            height: 25px;
+            width: 105px;
+            display: block;
+            background-repeat: no-repeat;
+            margin-top: 0;
+            background-position: 13px 3px;
+            background-size: 80%;
+          }
+
+          .yesbnk {
+            background-image: url(https://pay.imimg.com/img/pwim/emi/YesBank.png);
+            float: left;
+            height: 25px;
+            width: 105px;
+            display: block;
+            background-repeat: no-repeat;
+            margin-top: 0;
+            background-position: 10px -1px;
+            background-size: 60%;
+          }
+
+          .indusindbnk {
+            background-image: url(https://pay.imimg.com/img/pwim/emi/IndusIndBank.png);
+            float: left;
+            height: 25px;
+            width: 105px;
+            display: block;
+            background-repeat: no-repeat;
+            margin-top: 0;
+            background-position: 10px 6px;
+            background-size: 60%;
+          }
+
+          .hsbcbnk {
+            background-image: url(https://pay.imimg.com/img/pwim/emi/HSBCBank.png);
+            float: left;
+            height: 25px;
+            width: 105px;
+            display: block;
+            background-repeat: no-repeat;
+            margin-top: 0;
+            background-position: 13px 6px;
+            background-size: 60%;
+          }
+
+          .corpbnk {
+            background-image: url(https://pay.imimg.com/img/pwim/emi/CorporationBank.png);
+            float: left;
+            height: 25px;
+            width: 110px;
+            display: block;
+            background-repeat: no-repeat;
+            margin-top: 0;
+            background-position: 5px 3px;
+            background-size: 100%;
+          }
+
+          .bobbnk {
+            background-image: url(https://pay.imimg.com/img/pwim/emi/BankOfBaroda.png);
+            float: left;
+            height: 25px;
+            width: 105px;
+            display: block;
+            background-repeat: no-repeat;
+            margin-top: 0;
+            background-position: 13px 3px;
+            background-size: 50%;
+          }
+
+          .idbibnk {
+            height: 28px !important;
+          }
+        </style>
+
+        <div class="trust_p ng-scope">
+          <div class="trust_1">
+            <img
+              src="https://pay.imimg.com/img/pwim/shield.png"
+              alt=""
+              style=""
+            />
+            <span>100% Safe &amp; Secure Payments</span>
+          </div>
+          <div class="trust_2">
+            <div>Multiple payment options</div>
+            <div>
+              <img
+                src="https://utils.imimg.com/payments/pwim_files/pwim_modes_v5.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div data-ng-show="isSaving" class="loader_wrap ng-scope ng-hide">
+          <div class="loader_back">
+            <div class="contener_loader_18">
+              <div class="f1078404_sup">
+                <div class="f978404_petit">
+                  <div class="f1078404_fond">
+                    <div class="f1078404"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-ng-show="isShowAllCards"
+          class="loader_wrap ng-scope ng-hide"
+        ></div>
+        <!--<div data-ng-show="isSaving" class="pace pace-active"><div class="pace-progress" data-progress="50" data-progress-text="50%" style="-webkit-transform: translate3d(50%, 0px, 0px); -ms-transform: translate3d(50%, 0px, 0px); transform: translate3d(50%, 0px, 0px);"><div class="pace-progress-inner"></div></div><div class="pace-activity"></div></div>-->
+        <div class="container clearfix ng-scope">
+          <!-- ngIf: user.pid -->
+          <article class="auto">
+            <div class="Paynow-div">
+              <div>
+                <form
+                  name="form"
+                  class="
+                    css-form
+                    ng-pristine
+                    ng-invalid
+                    ng-invalid-required
+                    ng-valid-minlength
+                    ng-valid-maxlength
+                    ng-valid-email
+                    ng-invalid-pattern
+                  "
+                  id="frmPaynow"
+                  autocomplete="off"
+                  novalidate=""
+                >
+                  <input type="text" style="display: none" />
+                  <input type="password" style="display: none" />
+                  <div class="one" data-ng-hide="user.pid">
+                    <div id="step1details" style="display: block">
+                      <!-- User Details Result Data-->
+                      <div class="fetch-data1 overflow">
+                        <span class="num">1</span
+                        ><span class="step-name">
+                          User Details &nbsp;&nbsp;</span
+                        >
+                        <div class="arrow"></div>
+                        <!-- ngIf: isB -->
+                        <!-- ngIf: isB -->
+                        <div class="step1DetailDiv">
+                          <ul>
+                            <li>
+                              <span class="ng-binding">
+                                <i class="large material-icons">phone</i>
+                                8048372402</span
+                              >
+                            </li>
+
+                            <li data-ng-show="user.email.trim()" class="">
+                              <span class="ng-binding">
+                                <i class="large material-icons">email</i>
+                                s*****************@gmail.com</span
+                              >
+                            </li>
+                            
+
+                            <li data-ng-show="user.name.trim()" class="">
+                              <span class="ng-binding">
+                                <i class="large material-icons">account_circle</i>
+                                Manhour
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="display: none" id="step1mobile">
+                      <!-- Phone no enter -->
+                      <div class="Step1">
+                        <h2>
+                          <span class="stepMark">1</span>To make payment enter
+                          your mobile number.
+                        </h2>
+                      </div>
+                      <section class="bg-white padding overflow">
+                        <div class="phon-text-div auto" id="phndiv">
+                          <!-- phon-text-div Start-->
+                          <div class="phone-glow">
+                            <!-- phon-GLow div-->
+                          </div>
+                          <input
+                            id="isRegisteredMobile"
+                            class="
+                              text-box
+                              left
+                              ng-pristine
+                              ng-untouched
+                              ng-invalid
+                              ng-invalid-required
+                              ng-valid-minlength
+                              ng-valid-maxlength
+                            "
+                            placeholder="eg. 99999xxxxx"
+                            type="text"
+                            data-ng-minlength="10"
+                            data-ng-maxlength="20"
+                            data-ng-model="user.isregistedmobile"
+                            name="uisregistedmobile"
+                            data-ng-enter="getRegisteredUserDetails(user.isregistedmobile,1)"
+                            phone=""
+                            required=""
+                            autocomplete="off"
+                            formnovalidate=""
+                          />
+                          <button
+                            id="btnCheckRegisteredUser"
+                            class="pay-btn left load"
+                            type="button"
+                            data-ng-disabled="form.uisregistedmobile.$invalid || isSaving"
+                            data-ng-click="getRegisteredUserDetails(user.isregistedmobile,1)"
+                            disabled="disabled"
+                          >
+                            Submit
+                          </button>
+                          <div class="input-error" style="display: none">
+                            <span class="err"
+                              >This is not a valid mobile number.</span
+                            >
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                    <div
+                      id="step1registration"
+                      style="background: rgb(255, 255, 255); display: none"
+                    >
+                      <div class="Step1">
+                        <h2>
+                          <span class="stepMark">1</span> Enter Your Details
+                        </h2>
+                        <a data-ng-click="notMe()" href=""
+                          ><span class="notme">Not Me</span></a
+                        >
+                      </div>
+                      <div class="user-reg clear">
+                        <div class="div-block">
+                          <span class="icon-regi fa fa-2x fa-globe"></span>
+                          <input
+                            type="hidden"
+                            data-ng-model="user.countryiso"
+                            value=""
+                            class="ng-pristine ng-untouched ng-valid"
+                          />
+                          <input
+                            id="citrusCountry"
+                            placeholder="Country"
+                            class="
+                              text
+                              ng-pristine
+                              ng-untouched
+                              ng-invalid
+                              ng-invalid-required
+                            "
+                            type="text"
+                            data-ng-model="user.country"
+                            name="uCountry"
+                            countries=""
+                            required=""
+                            ng-autocomplete="off"
+                            data-ng-disabled="true"
+                            disabled="disabled"
+                          />
+                          <div class="input-error">
+                            <div
+                              data-ng-show="form.$submitted || form.uCountry.$touched"
+                              class="ng-hide"
+                            >
+                              <span
+                                class="err"
+                                data-ng-show="form.uCountry.$error.required"
+                                >Tell us your country.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="div-block">
+                          <span class="icon-regi-mob fa fa-mobile"></span>
+                          <input
+                            id="citrusMobile"
+                            placeholder="Mobile No."
+                            class="
+                              text
+                              ng-pristine
+                              ng-untouched
+                              ng-valid-minlength
+                              ng-valid-maxlength
+                              ng-valid
+                              ng-valid-required
+                            "
+                            type="text"
+                            data-ng-model="user.mobile"
+                            name="uMobile"
+                            data-ng-maxlength="10"
+                            data-ng-minlength="10"
+                            data-ng-disabled="true"
+                            data-ng-readonly=""
+                            mobile=""
+                            required=""
+                            disabled="disabled"
+                          />
+                          <div class="input-error">
+                            <div style="display: none">
+                              <span class="err"
+                                >This is not a valid number.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="div-block">
+                          <span class="icon-regi fa fa-2x fa-user"></span>
+                          <input
+                            id="citrusFirstName"
+                            placeholder="Your Name"
+                            class="
+                              text
+                              ng-pristine
+                              ng-untouched
+                              ng-valid
+                              ng-valid-required
+                            "
+                            type="text"
+                            data-ng-model="user.name"
+                            name="uName"
+                            required=""
+                            data-ng-disabled="true"
+                            disabled="disabled"
+                          />
+                          <input id="citrusLastName" type="hidden" value="" />
+                          <div class="input-error">
+                            <div
+                              data-ng-show="form.$submitted || form.uName.$touched"
+                              class="ng-hide"
+                            >
+                              <span
+                                class="err ng-hide"
+                                data-ng-show="form.uName.$error.required"
+                                >Tell us your name.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="div-block">
+                          <span class="icon-regi fa fa-2x fa-envelope"></span>
+                          <input
+                            id="citrusEmail"
+                            class="
+                              text
+                              ng-pristine
+                              ng-untouched
+                              ng-valid-email
+                              ng-invalid
+                              ng-valid-required
+                              ng-invalid-pattern
+                            "
+                            placeholder="Email Id"
+                            type="email"
+                            data-ng-model="user.email"
+                            name="uEmail"
+                            data-ng-pattern="/\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}\b/"
+                            data-ng-change="getUserDetails(user.email)"
+                            required=""
+                            data-ng-disabled="true"
+                            disabled="disabled"
+                          />
+                          <div class="input-error">
+                            <div
+                              data-ng-show="form.$submitted || form.uEmail.$touched"
+                              class="ng-hide"
+                            >
+                              <span
+                                class="err ng-hide"
+                                data-ng-show="form.uEmail.$error.required"
+                                >Tell us your email.</span
+                              >
+                              <span
+                                class="err"
+                                data-ng-show="form.uEmail.$error.pattern"
+                                >This is not a valid email.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="div-block" style="display: none">
+                          <span class="icon-regi fa fa-2x fa-home"></span>
+                          <input
+                            id="citrusStreet1"
+                            placeholder="Address"
+                            class="text ng-pristine ng-untouched ng-valid"
+                            type="text"
+                            data-ng-model="user.address"
+                            name="uAddress"
+                            data-ng-disabled="true"
+                            disabled="disabled"
+                          />
+                          <input
+                            id="citrusStreet2"
+                            type="hidden"
+                            value="street2"
+                          />
+                          <input
+                            id="citrusCurrency"
+                            type="hidden"
+                            data-ng-model="user.citruscurrency"
+                            class="ng-pristine ng-untouched ng-valid"
+                          />
+                          <div class="input-error">
+                            <div
+                              data-ng-show="form.$submitted || form.uAddress.$touched"
+                              class="ng-hide"
+                            >
+                              <span
+                                class="err ng-hide"
+                                data-ng-show="form.uAddress.$error.required"
+                                >Tell us your address.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="div-block" style="display: none">
+                          <span
+                            class="icon-regi fa fa-2x fa-institution"
+                          ></span>
+                          <input
+                            placeholder="Company Name"
+                            class="text ng-pristine ng-untouched ng-valid"
+                            type="text"
+                            data-ng-model="user.company"
+                            name="uCompany"
+                            data-ng-disabled="true"
+                            disabled="disabled"
+                          />
+                          <div class="input-error">
+                            <div
+                              data-ng-show="form.$submitted || form.uCompany.$touched"
+                              class="ng-hide"
+                            >
+                              <span
+                                class="err ng-hide"
+                                data-ng-show="form.uCompany.$error.required"
+                                >Tell us your company.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="div-block" style="display: none">
+                          <span class="icon-regi fa fa-2x fa-map-marker"></span>
+                          <input
+                            id="citrusCity"
+                            placeholder="City"
+                            class="text ng-pristine ng-untouched ng-valid"
+                            type="text"
+                            data-ng-model="user.city"
+                            name="uCity"
+                            data-ng-disabled="!user.country"
+                            cities=""
+                            ng-autocomplete="off"
+                            disabled="disabled"
+                          />
+                          <input id="citrusState" type="hidden" value="" />
+                          <input
+                            id="citrusMerchantTxnId"
+                            type="hidden"
+                            value=""
+                          />
+                          <div class="input-error">
+                            <div
+                              data-ng-show="form.$submitted || form.uCity.$touched"
+                              class="ng-hide"
+                            >
+                              <span
+                                class="err ng-hide"
+                                data-ng-show="form.uCity.$error.required"
+                                >Tell us your city.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="div-block" style="display: none">
+                          <span
+                            class="icon-regi fa fa-2x fa-location-arrow"
+                          ></span>
+                          <input
+                            placeholder="Zip Code"
+                            class="text ng-pristine ng-untouched ng-valid"
+                            type="text"
+                            data-ng-model="user.zipcode"
+                            name="uZipcode"
+                            data-ng-disabled="true"
+                            disabled="disabled"
+                          />
+                          <input id="citrusZip" type="hidden" value="" />
+                        </div>
+                        <div class="clear"></div>
+                        <button
+                          class="sbmit-btn load"
+                          data-ng-disabled="form.uEmail.$invalid || form.uCompany.$invalid || form.uName.$invalid || form.uCountry.$invalid || form.uCity.$invalid || form.uMobile.$invalid || form.uAddress.$invalid || isSaving"
+                          data-ng-click="update(user)"
+                          disabled="disabled"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Step2 Start-->
+                  <div class="two" data-ng-hide="user.pid">
+                    <div
+                      style="display: none"
+                      id="step2disabled"
+                      class="step-close1"
+                      data-ng-hide="user.pid"
+                    >
+                      <!-- Selected Services Result-->
+                      <h2>
+                        <span class="stepMarkclose">2</span> Purpose of payment
+                      </h2>
+                    </div>
+                    <div id="step2details" style="display: block">
+                      <div class="fetch-data1 overflow">
+                        <span class="num">2</span
+                        ><span class="step-name">Purpose of payment</span>
+                        <div class="arrow"></div>
+                        <!-- ngIf: isB -->
+                        <!-- ngIf: isB -->
+                        <div class="service-detail-div ng-binding">
+                          ₹
+                          <span
+                            data-ng-show="user.services == 'Other Service'"
+                            class="ng-binding ng-hide"
+                          >
+                            -
+                          </span>
+                          <span style="padding-left: 15px" class="ng-binding">
+                            oil</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div id="step2services" style="display: none">
+                      <!-- Selected Services-->
+                      <div class="Step2">
+                        <h2>
+                          <span class="stepMark">2</span>Purpose of payment
+                        </h2>
+                      </div>
+                      <!-- other services and amount details -->
+                      <section
+                        id="amountDetails"
+                        class="bg-white padding overflow amountDetails"
+                        style="display: none"
+                      >
+                        <div class="paymentpro-div">
+                          <!-- Show only when user have more than one Pending Renewal -->
+                          <div
+                            id="pendingRenewal"
+                            class="PendingRenewal ng-hide"
+                            data-ng-show="user.moreservices.length > 1 &amp;&amp; isMDC &amp;&amp; isMaxi"
+                          >
+                            <div class="clearfix padding style0">
+                              Select Duration
+                            </div>
+                            <!-- ngRepeat: service in user.moreservices -->
+                          </div>
+                          <div class="clear"></div>
+                          <!-- Show only when user select other service -->
+                          <div class="txtOtherServicediv">
+                            <input
+                              placeholder="Purpose of payment"
+                              class="
+                                txtOtherService
+                                ng-pristine ng-untouched ng-valid
+                              "
+                              name="uOtherService"
+                              data-ng-model="user.services"
+                              list="otherservice"
+                              otherservice=""
+                              autocomplete="on"
+                              data-ng-trim="false"
+                            />
+                            <span
+                              class="err ng-binding"
+                              data-ng-show="user.services.length <= 250"
+                              style="
+                                color: blue;
+                                text-align: center;
+                                display: block;
+                                position: relative;
+                                left: -90px;
+                              "
+                            >
+                              Characters left: 247
+                            </span>
+                            <span
+                              class="err ng-hide"
+                              data-ng-show="user.services.length > 250"
+                              style="
+                                color: red;
+                                text-align: center;
+                                display: block;
+                              "
+                              >You have exceeded description limit.</span
+                            >
+                          </div>
+                          <div class="clear"></div>
+                          <div class="amount-div auto">
+                            <!-- amont-text-div Start-->
+                            <div class="rupee-glow">
+                              <i class="fa-rupee fa fa-4x"></i>
+                              <!-- amount-GLow div-->
+                            </div>
+                            <!--^[1-9]\d*(\.\d+)?$-->
+                            <!--payments-39 resolution; pattern change-->
+                            <input
+                              placeholder="Total Amount (Rupees)"
+                              class="
+                                text-box1
+                                left
+                                ng-pristine
+                                ng-untouched
+                                ng-valid
+                                ng-valid-required
+                              "
+                              data-ng-model="user.amount"
+                              data-ng-disabled="isUpdtPrdInfo"
+                              name="uAmount"
+                              id="uAmount"
+                              required=""
+                              amount=""
+                            />
+                            <div class="input-error heightAuto">
+                              <div>
+                                <span
+                                  class="err ng-hide"
+                                  data-ng-show="user.amount < 20"
+                                  >Minimum transaction amount is ₹ 20.</span
+                                >
+                                <span ng-switch="" on="amountLimit">
+                                  <!-- ngIf: amountLimit >= 100000 --><span
+                                    data-ng-if="amountLimit >= 100000"
+                                    class="err ng-binding ng-scope ng-hide"
+                                    data-ng-show="user.amount > amountLimit"
+                                    >Maximum transaction limit is ₹
+                                    100000.</span
+                                  ><!-- end ngIf: amountLimit >= 100000 -->
+                                  <!-- ngIf: amountLimit < 100000 -->
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="clear"></div>
+                          <span>
+                            <!-- change continue button action based on gateway -->
+                            <span ng-switch="" on="amountLimit">
+                              <!-- ngIf: amountLimit > 100000 -->
+
+                              <!-- ngIf: amountLimit <= 100000 --><button
+                                data-ng-if="amountLimit <= 100000"
+                                id="continueStep2"
+                                data-ng-disabled="form.uAmount.$invalid || user.amount > 100000 || user.amount < 20 || user.services.length > 250 || !user.services"
+                                class="paynow-btn load"
+                                type="button"
+                                data-ng-click="proceedToPayment()"
+                              >
+                                Continue<i
+                                  class="icon fa fa-chevron-circle-right"
+                                ></i></button
+                              ><!-- end ngIf: amountLimit <= 100000 -->
+                            </span>
+                          </span>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <!-- Step3-->
+                  <div class="three">
+                    <div
+                      id="step3disabled"
+                      style="display: none"
+                      class="step-close2"
+                      data-ng-hide="user.pid"
+                    >
+                      <!-- Payment Details non selected-->
+                      <h2>
+                        <span class="stepMarkclose">3</span>Payment Method
+                      </h2>
+                    </div>
+                    <div id="step3payment" style="display: block">
+                      <div class="Step3" data-ng-hide="user.pid">
+                        <!-- Payment Details selected-->
+                        <h2><span class="stepMark">3</span>Payment Method</h2>
+                      </div>
+                      <section class="bg-white padding overflow">
+                        <div
+                          id="serviceYear"
+                          class="PendingRenewal"
+                          style="
+                            padding-bottom: 0px;
+                            margin-top: 0px;
+                            display: block;
+                            float: left;
+                          "
+                          data-ng-show="user.cardtype != 'MANDATE'"
+                        >
+                          <!-- ngRepeat: service in mdcservices -->
+                          <!-- ngRepeat: service in maxiservices -->
+                          <!-- ngRepeat: service in buyleadservices -->
+                          <!-- ngIf: isPendingRenewal -->
+                        </div>
+                        <div class="paymentpro-div">
+                          <!-- citrus and payu -->
+                          <div class="outerPaymentMode">
+                            <div
+                              style="
+                                color: #333;
+                                text-align: center;
+                                margin: 10px 0;
+                                display: inline-block;
+                                width: 51%;
+                                float: right;
+                                min-width: 535px;
+                                max-width: 522px;
+                                padding: 10px;
+                                background-color: #ffeca6;
+                                font-size: 13px;
+                                border-radius: 7px;
+                              "
+                              class="downStatus ng-hide"
+                              ng-show="downBanks &amp;&amp; downBanks.length != 0 &amp;&amp; netbankingactive == 'active'"
+                            >
+                              <span
+                                class="fa fa-info-circle"
+                                style="color: rgba(230, 104, 71, 1)"
+                              ></span>
+                              <!-- ngRepeat: bank in downBanks --><span
+                                data-ng-repeat="bank in downBanks"
+                                class="ng-binding ng-scope"
+                              >
+                                Saraswat Bank<span
+                                  data-ng-hide="$last"
+                                  class="ng-hide"
+                                  >,
+                                </span> </span
+                              ><!-- end ngRepeat: bank in downBanks -->
+                              is/are experiencing some fluctuations. Your
+                              attempt may or may not succeed. If you wish you
+                              may use another payment option.
+                            </div>
+                            <!-- pan card details -->
+                            <input
+                              placeholder="Pan Card"
+                              class="
+                                text-box1
+                                left
+                                ng-pristine ng-untouched ng-valid ng-hide
+                              "
+                              data-ng-model="user.pancardNumber"
+                              name="pancardNumber"
+                              id="pancardNumber"
+                              data-ng-show="user.amount >= 200000 &amp;&amp; user.cardtype != 'MANDATE'"
+                              style="float: right; width: 550px; margin-top: 0"
+                            />
+                            <!-- Card Mode-->
+                            <!-- ngIf: whichgateway == 'citrus' || whichgateway == 'payu' || whichgateway == 'im_ccavenue' || whichgateway == 'innoviti' || whichgateway == 'zaakpay' || whichgateway == 'cashfree' -->
+                            <div
+                              id="citrusPG"
+                              class="paymentMode ng-scope"
+                              data-ng-if="whichgateway == 'citrus' || whichgateway == 'payu' || whichgateway == 'im_ccavenue' || whichgateway == 'innoviti' || whichgateway == 'zaakpay' || whichgateway == 'cashfree'"
+                            >
+                              <ul>
+                                <!-- ngIf: user.countryiso == 'IN' -->
+                                <li
+                                  data-ng-if="user.countryiso == 'IN'"
+                                  class="ng-scope"
+                                >
+                                  <span
+                                      style="
+                                        font-size: 10px;
+                                        color: #fff;
+                                        margin-left: -26px;
+                                        top: -15px;
+                                        position: relative;
+                                        font-family: arial;
+                                        font-weight: normal;
+                                      "
+                                      >NEW</span
+                                    ></i
+                                  >
+                                  <!-- ngIf: user.amount<=100000 --><button
+                                    data-ng-click="upi()"
+                                    class="credit-card left active"
+                                    id="upi"
+                                    data-ng-disabled="form.uAmount.$invalid"
+                                    ng-if="user.amount<=100000"
+                                  >
+                                    UPI App
+                                  </button>
+                                </li>
+
+                                <li
+                                  data-ng-if="user.countryiso == 'IN'"
+                                  data-ng-show="user.mobile == '9711684594' || user.mobile == '7982608718'"
+                                  class="ng-scope ng-hide"
+                                >
+                                  <button
+                                    data-ng-click="bharatQR()"
+                                    class="credit-card left"
+                                    data-ng-disabled="form.uAmount.$invalid"
+                                  >
+                                    Scan QR
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div
+                              class="lastpayment"
+                              id="lastpayment"
+                              data-ng-show="whichgateway == 'citrus' || whichgateway == 'payu' || whichgateway == 'im_ccavenue' || whichgateway == 'zaakpay' || whichgateway == 'cashfree'"
+                              style="display: block"
+                            >
+                              <div
+                                data-ng-show="debitactive || (!(user.amount - amountLimit > 0))"
+                                class=""
+                              >
+                                <!--<div id="save card" class="s-card-option clearfix" data-ng-show="saveCardDetailsCount > 0 && isCreditOrDebit && showSavedCardCreditOrDebit">
+                                                    <div class="card-mode sv-card {{clsSavedCard}}" data-ng-click='savedCard()'>
+                                                        Saved Card
+                                                    </div>
+                                                    <div class="card-mode nw-card {{clsNewCard}}" data-ng-click='newCard()'>
+                                                        New Card
+                                                    </div>
+                                                </div>-->
+
+                                <div
+                                  class="leftbox"
+                                  id="creditcard"
+                                  style="display: none"
+                                >
+                                  <input
+                                    type="hidden"
+                                    id="citrusAmount"
+                                    value="100.00"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    data-ng-model="user.ispaymentoption"
+                                    class="ng-pristine ng-untouched ng-valid"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="citrusCardType"
+                                    value="iciciUpi"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="citrusScheme"
+                                    value=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="citrusSignature"
+                                    value=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="citrusReturnUrl"
+                                    value=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="citrusNumber"
+                                    value=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="citrusExpiry"
+                                    value=" / 20"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="citrusCvv"
+                                    value=""
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="citrusCardHolder"
+                                    value=""
+                                  />
+
+                                  <input
+                                    type="hidden"
+                                    id="citrusCustomParamCount"
+                                    value="1"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="citrusCustomParamsName1"
+                                    value="serviceid"
+                                  />
+                                  <input
+                                    type="hidden"
+                                    id="citrusCustomParamsValue1"
+                                    value=""
+                                  />
+
+                                  <div
+                                    data-ng-show="newCardOption"
+                                    class="ng-hide"
+                                  >
+                                    <input
+                                      id="cardnumber"
+                                      type="text"
+                                      placeholder="Card Number"
+                                      data-ng-model="user.cardnumber"
+                                      name="uCardNumber"
+                                      class="
+                                        cardno
+                                        ng-pristine
+                                        ng-untouched
+                                        ng-invalid
+                                        ng-invalid-required
+                                      "
+                                      required=""
+                                      cardnumber=""
+                                      autocomplete="off"
+                                      formnovalidate=""
+                                    />
+                                    <div
+                                      class="input-error ng-hide"
+                                      data-ng-show="isMaestro"
+                                    >
+                                      <span class="blue" id="msgIsMaestro"
+                                        ><strong
+                                          >Expiry Date &amp; CVV are optional
+                                          for maestro card</strong
+                                        ></span
+                                      >
+                                    </div>
+                                    <div class="expirydate">
+                                      <input
+                                        id="cardmonth"
+                                        type="text"
+                                        data-ng-pattern="/^\d+$/"
+                                        data-ng-minlength="2"
+                                        data-ng-maxlength="2"
+                                        placeholder="MM"
+                                        data-ng-model="user.cardexpirymonth"
+                                        name="uExpiryMonth"
+                                        class="
+                                          expirydt
+                                          ng-pristine
+                                          ng-untouched
+                                          ng-invalid
+                                          ng-invalid-required
+                                          ng-valid-pattern
+                                          ng-valid-minlength
+                                          ng-valid-maxlength
+                                        "
+                                        data-ng-required="!isMaestro"
+                                        cardmonth=""
+                                        autocomplete="off"
+                                        formnovalidate=""
+                                        required="required"
+                                      />
+                                      <span class="lable">/</span>
+                                      <input
+                                        id="cardyear"
+                                        type="text"
+                                        data-ng-pattern="/^\d+$/"
+                                        data-ng-minlength="2"
+                                        data-ng-maxlength="2"
+                                        placeholder="YY"
+                                        data-ng-model="user.cardexpiryyear"
+                                        name="uExpiryYear"
+                                        class="
+                                          expiryyr
+                                          ng-pristine
+                                          ng-untouched
+                                          ng-invalid
+                                          ng-invalid-required
+                                          ng-valid-pattern
+                                          ng-valid-minlength
+                                          ng-valid-maxlength
+                                        "
+                                        data-ng-required="!isMaestro"
+                                        cardyear=""
+                                        autocomplete="off"
+                                        autocorrect="off"
+                                        autocapitalize="off"
+                                        formnovalidate=""
+                                        required="required"
+                                      />
+                                    </div>
+                                    <span class="expirydatelabel"
+                                      >Expiry Date</span
+                                    >
+                                    <span class="cvvnodiv">
+                                      <input
+                                        id="cardcvv"
+                                        data-ng-minlength="3"
+                                        data-ng-pattern="/^\d+$/"
+                                        data-ng-maxlength="4"
+                                        type="password"
+                                        placeholder="CVV"
+                                        data-ng-model="user.cardcvv"
+                                        name="uCvv"
+                                        class="
+                                          cvvno
+                                          ng-pristine
+                                          ng-untouched
+                                          ng-invalid
+                                          ng-invalid-required
+                                          ng-valid-pattern
+                                          ng-valid-minlength
+                                          ng-valid-maxlength
+                                        "
+                                        ng-minlength="3"
+                                        data-ng-required="!isMaestro"
+                                        cvv=""
+                                        autocomplete="off"
+                                        formnovalidate=""
+                                        required="required"
+                                      />
+                                      <span class="content"
+                                        ><a href="" data-tooltip=""> <img /></a>
+                                      </span>
+                                    </span>
+
+                                    <input
+                                      id="cardHolderName"
+                                      type="text"
+                                      placeholder="Name on Card"
+                                      data-ng-model="user.cardname"
+                                      name="uCardName"
+                                      class="
+                                        cardnm
+                                        ng-pristine
+                                        ng-untouched
+                                        ng-invalid
+                                        ng-invalid-required
+                                      "
+                                      required=""
+                                      cardholder=""
+                                      autocomplete="off"
+                                      formnovalidate=""
+                                    />
+
+                                    <div class="savecard">
+                                      <strong class="ng-binding">
+                                        Total Payable Amount :
+                                        <i class="fa fa-rupee"></i>
+                                        100.00</strong
+                                      >
+                                    </div>
+                                    <!-- <div class="savecard" style="background: none;padding-left: 3px;font-size: 15px;padding-bottom: 0;margin-bottom: 0;" data-ng-show="whichgateway == 'im_ccavenue'">
+                                                            <input type="checkbox" ng-model="user.saveCard" ng-true-value="'Y'" ng-false-value="'N'" style="visibility:visible;">
+                                                            <strong class="ng-binding"> Save Card</strong>
+                                                        </div> -->
+                                    <div class="input-error heightAuto">
+                                      <span
+                                        class="err"
+                                        id="creditCardErrorMsg"
+                                        style="display: block"
+                                      ></span>
+                                      <span
+                                        class="err"
+                                        id="expiryMonthErrorMsg"
+                                        style="display: block"
+                                      ></span>
+                                      <span
+                                        class="err"
+                                        id="expiryYearErrorMsg"
+                                        style="display: block"
+                                      ></span>
+                                      <span
+                                        class="err"
+                                        id="citrusErrorMsg"
+                                        style="display: block"
+                                      ></span>
+                                    </div>
+                                    <button
+                                      class="btn load"
+                                      data-ng-click="validateCardDetails()"
+                                      data-ng-disabled="isSaving || form.uAmount.$invalid"
+                                    >
+                                      Pay Now<i
+                                        class="icon fa fa-chevron-circle-right"
+                                      ></i>
+                                    </button>
+                                  </div>
+                                  <!-- <div data-ng-show="savedCardOption">
+                                                        <div style="text-align: center;" data-ng-show="!isVerifiedOtp">
+                                                            <h3>Verification Required</h3>
+                                                            <p style="padding: 10px;">Please verify your mobile number to view saved card details.</p>
+                                                            <input data-ng-show="isOtp" class="cardnm" type="text" data-ng-model="user.otp" placeholder="OTP" ng-keyup="$event.keyCode == 13 && verifyOtp()" style="font-size: 16px;width: 200px;float: none;">
+
+                                                            <p><span data-ng-click="requestOtp()" style="color: blue;" data-ng-show="isOtp">Resend OTP</span></p>
+                                                            <button data-ng-show="!isOtp" class="btn" data-ng-click="requestOtp()" data-ng-disabled="isSaving" style="width: 150px;font-size: 16px;height: 40px;line-height: 40px;">Request OTP</button>
+                                                            <button data-ng-show="isOtp" data-ng-click = "verifyOtp()" class="btn"  name="vOtp" data-ng-disabled="isSaving" style="width: 150px;font-size: 16px;height: 40px;line-height: 40px;">Verify OTP</button>
+                                                        </div>
+                                                        <div data-ng-show="saveCardDetailsCount > 0 && isVerifiedOtp && isOtp">
+                                                            <div data-ng-show="isShowAllCards" style="position:absolute;z-index:999;margin-left: 10%;">
+
+                                                                <div class="mor-list">
+                                                                    <a data-ng-click="hideAllSavedCards()" class="mor-grad-bg hide-sv">Hide <i style="float:right; cursor: pointer" class="fa fa-close fa-lg"></i> </a>
+                                                                    <ul>
+                                                                        <li class="mor-grad-bg crd-list" data-ng-repeat='savecard in saveCardDetails'>
+                                                                            <span> <i class="fa fa-trash"  style="float:right" ng-click = "deleteCard(savecard.customer_card_id)"></i> </span>
+                                                                            <span data-ng-click="selectSavedCards(savecard.customer_card_id)"> <span class="crd-dtd"> {{savecard.customer_card_label}} </span>                                                                            <span class="crd-dtd">xxxx xxxx xxxx {{savecard.customer_card_no}} </span>                                                                            </span>
+
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sv-crd-no">
+                                                                xxxx xxxx xxxx {{savedCardDetail.customer_card_no}}<img data-ng-src='https://pay.imimg.com/img/{{savedCardDetail.cardScheme}}'
+                                                                                                                        style="float:right;">
+                                                            </div>
+                                                            <div class="more-crd" data-ng-click="showAllSavedCards()">
+                                                                Show all
+                                                                <br> my cards
+                                                            </div>
+                                                            <div class="savecard" style="margin-top:15px;width:94%;display:inline-block;">
+                                                                <strong class="ng-binding"> {{savedCardDetail.customer_card_label}} </strong>
+                                                                <span style="float:right;">{{savedCardDetail.cardType}}</span>
+                                                            </div>
+                                                            <div class="clearfix">
+                                                                <span class="cvvnodiv" style="float:left">
+                                                                    <input  formnovalidate="" autocomplete="off" data-ng-if="savedCardDetail.customer_card_name.indexOf('Amex') != -1" data-ng-model="user.savedCardCvv" maxlength="4" id="savedCardCvv" class="cvvno" placeholder="CVV" name="savedCardCvv" data-ng-maxlength="4" data-ng-pattern="/^\d+$/" data-ng-minlength="3" required="required" type="password" data-ng-enter = "!form.savedCardCvv.$invalid && checkPayment()"  style="width:60%;margin-top: 0;border: 1px solid #7ad1ff;box-shadow: 0 0 15px rgba(34,147,249,.75)">
+                                                                    <input  formnovalidate="" autocomplete="off" data-ng-if="savedCardDetail.customer_card_name.indexOf('Amex') == -1" data-ng-model="user.savedCardCvv" maxlength="3" id="savedCardCvv" class="cvvno" placeholder="CVV" name="savedCardCvv" data-ng-maxlength="3" data-ng-pattern="/^\d+$/" data-ng-minlength="3" required="required" type="password" data-ng-enter = "!form.savedCardCvv.$invalid && checkPayment()"  style="width:60%;margin-top: 0;border: 1px solid #7ad1ff;box-shadow: 0 0 15px rgba(34,147,249,.75)">
+                                                                </span>
+                                                                <button class="btn" data-ng-disabled="form.savedCardCvv.$invalid || isSaving || form.uAmount.$invalid || user.savedCardCvv.length > 4"
+                                                                        data-ng-click="checkPayment()" style="margin-left: 0;">
+                                                                    Pay Now<i class="icon fa fa-chevron-circle-right "></i>
+                                                                </button>
+                                                                <div ng-if="form.savedCardCvv.$dirty">
+                                                                    <span class="err" data-ng-show="form.savedCardCvv.$error.required" style="display: block; padding-top: 10px; text-align: center;color: red">Tell us your CVV.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div data-ng-show="saveCardDetailsCount == 0" style="text-align:center;">
+                                                            You don't have any saved card detail.
+                                                        </div>
+                                                    </div>-->
+                                </div>
+                              </div>
+                              <!-- ngIf: ((user.amount - amountLimit > 0) && creditactive) || ((user.amount - amountLimit > 0) && creditdebitactive) -->
+                              <div
+                                class="leftbox"
+                                id="netbanking"
+                                style="display: none"
+                              >
+                                <h1>Popular Banks</h1>
+                                <div id="netbankingbx" class="netbankingbx">
+                                  <span>
+                                    <ul>
+                                      <li
+                                        id="axis"
+                                        data-ng-click="setNetbankingBankOption('AXIS Bank')"
+                                      >
+                                        <span
+                                          ><label
+                                            class="css-label radGroup2 left"
+                                            >&nbsp;</label
+                                          ><span class="banklogo axisbnk"></span
+                                        ></span>
+                                      </li>
+                                      <li
+                                        id="idbi"
+                                        data-ng-click="setNetbankingBankOption('IDBI')"
+                                      >
+                                        <span
+                                          ><label
+                                            class="css-label radGroup2 left"
+                                            for="idbibnk"
+                                            >&nbsp;</label
+                                          ><span class="idbibnk"></span
+                                        ></span>
+                                      </li>
+                                      <li
+                                        id="hdfc"
+                                        data-ng-click="setNetbankingBankOption('HDFC Bank')"
+                                      >
+                                        <span
+                                          ><label
+                                            class="css-label radGroup2"
+                                            for="hdfcbnk"
+                                            >&nbsp;</label
+                                          ><span class="banklogo hdfcbnk"></span
+                                        ></span>
+                                      </li>
+                                      <li
+                                        id="icici"
+                                        data-ng-click="setNetbankingBankOption('ICICI')"
+                                      >
+                                        <span
+                                          ><label
+                                            class="css-label radGroup2 left"
+                                            for="icicibnk"
+                                            >&nbsp;</label
+                                          ><span
+                                            class="banklogo icicibnk"
+                                          ></span
+                                        ></span>
+                                      </li>
+                                      <li
+                                        id="kotak"
+                                        data-ng-click="setNetbankingBankOption('Kotak Mahindra Bank')"
+                                      >
+                                        <span
+                                          ><label
+                                            class="css-label radGroup2 left"
+                                            for="kotakbnk"
+                                            >&nbsp;</label
+                                          ><span
+                                            class="banklogo kotakbnk"
+                                          ></span
+                                        ></span>
+                                      </li>
+                                      <li
+                                        id="sbi"
+                                        data-ng-click="setNetbankingBankOption('State Bank of India')"
+                                      >
+                                        <span
+                                          ><label
+                                            class="css-label radGroup2 left"
+                                            for="sbibnk"
+                                            >&nbsp;</label
+                                          ><span class="banklogo sbibnk"></span
+                                        ></span>
+                                      </li>
+                                    </ul>
+                                  </span>
+                                  <select
+                                    id="citrusAvailableOptions1"
+                                    class="
+                                      select-option
+                                      ng-pristine ng-untouched ng-valid
+                                    "
+                                    name="uNetBankingOption"
+                                    data-ng-model="user.netbankingoption"
+                                    data-ng-change="setNetbankingBankOption(user.netbankingoption)"
+                                  >
+                                    <option selected="" disabled="">
+                                      --Select bank--
+                                    </option>
+                                    <optgroup label="Popular Banks">
+                                      <option value="AXIS Bank">
+                                        AXIS Bank
+                                      </option>
+                                      <option value="HDFC Bank">
+                                        HDFC Bank
+                                      </option>
+                                      <option value="ICICI">ICICI</option>
+                                      <option value="IDBI">IDBI</option>
+                                      <option value="Kotak Mahindra Bank">
+                                        Kotak Mahindra Bank
+                                      </option>
+                                      <option value="State Bank of India">
+                                        State Bank of India
+                                      </option>
+                                    </optgroup>
+                                    <optgroup label="Corporate Banks">
+                                      <option value="AXIS Bank - Corporate">
+                                        AXIS Bank - Corporate
+                                      </option>
+                                      <option value="Bandhan Bank - Corporate">
+                                        Bandhan Bank - Corporate
+                                      </option>
+                                      <option
+                                        value="Bank of Baroda - Corporate"
+                                      >
+                                        Bank of Baroda - Corporate
+                                      </option>
+                                      <option value="Bank of India - Corporate">
+                                        Bank of India - Corporate
+                                      </option>
+                                      <option
+                                        value="Bank of Maharashtra - Corporate"
+                                      >
+                                        Bank of Maharashtra - Corporate
+                                      </option>
+                                      <option value="Barclays - Corporate">
+                                        Barclays - Corporate
+                                      </option>
+                                      <option
+                                        value="Central Bank Of India - Corporate"
+                                      >
+                                        Central Bank Of India - Corporate
+                                      </option>
+                                      <option
+                                        value="City Union Bank - Corporate"
+                                      >
+                                        City Union Bank - Corporate
+                                      </option>
+                                      <option value="DCB Bank - Corporate">
+                                        DCB Bank - Corporate
+                                      </option>
+                                      <option value="Deutsche Bank - Corporate">
+                                        Deutsche Bank - Corporate
+                                      </option>
+                                      <option
+                                        value="Dhanlaxmi Bank - Corporate"
+                                      >
+                                        Dhanlaxmi Bank - Corporate
+                                      </option>
+                                      <option value="Federal Bank - Corporate">
+                                        Federal Bank - Corporate
+                                      </option>
+                                      <option value="ICICI - Corporate">
+                                        ICICI - Corporate
+                                      </option>
+                                      <option
+                                        value="Indian Overseas Bank - Corporate"
+                                      >
+                                        Indian Overseas Bank - Corporate
+                                      </option>
+                                      <option
+                                        value="Jammu and Kashmir Bank - Corporate"
+                                      >
+                                        Jammu and Kashmir Bank - Corporate
+                                      </option>
+                                      <option
+                                        value="Karur Vysya Bank - Corporate"
+                                      >
+                                        Karur Vysya Bank - Corporate
+                                      </option>
+                                      <option
+                                        value="Kotak Mahindra Bank - Corporate"
+                                      >
+                                        Kotak Mahindra Bank - Corporate
+                                      </option>
+                                      <option
+                                        value="Lakshmi Vilas Bank - Corporate"
+                                      >
+                                        Lakshmi Vilas Bank - Corporate
+                                      </option>
+                                      <option
+                                        value="Punjab National Bank - Corporate"
+                                      >
+                                        Punjab National Bank - Corporate
+                                      </option>
+                                      <option value="Ratnakar - Corporate">
+                                        Ratnakar - Corporate
+                                      </option>
+                                      <option
+                                        value="Shamrao Vithal Bank - Corporate"
+                                      >
+                                        Shamrao Vithal Bank - Corporate
+                                      </option>
+                                      <option value="UCO Bank - Corporate">
+                                        UCO Bank - Corporate
+                                      </option>
+                                      <option value="Union Bank - Corporate">
+                                        Union Bank - Corporate
+                                      </option>
+                                      <option
+                                        value="Union Bank of India - Corporate"
+                                      >
+                                        Union Bank of India - Corporate
+                                      </option>
+                                      <option
+                                        value="United Bank Of India - Corporate"
+                                      >
+                                        United Bank Of India - Corporate
+                                      </option>
+                                      <option value="Yes Bank - Corporate">
+                                        Yes Bank - Corporate
+                                      </option>
+                                    </optgroup>
+                                    <optgroup label="Retail Banks">
+                                      <option value="Airtel Payments Bank">
+                                        Airtel Payments Bank
+                                      </option>
+                                      <option value="AU Small Finance Bank">
+                                        AU Small Finance Bank
+                                      </option>
+                                      <option value="Bandhan Bank">
+                                        Bandhan Bank
+                                      </option>
+                                      <option
+                                        value="Bank of Baharin and Kuwait "
+                                      >
+                                        Bank of Baharin and Kuwait
+                                      </option>
+                                      <option value="Bank of Baroda - Retail">
+                                        Bank of Baroda - Retail
+                                      </option>
+                                      <option value="Bank of India">
+                                        Bank of India
+                                      </option>
+                                      <option value="Bank of Maharashtra">
+                                        Bank of Maharashtra
+                                      </option>
+                                      <option value="Canara Bank">
+                                        Canara Bank
+                                      </option>
+                                      <option value="Catholic Syrian Bank">
+                                        Catholic Syrian Bank
+                                      </option>
+                                      <option value="Central Bank of India">
+                                        Central Bank of India
+                                      </option>
+                                      <option value="City Union Bank - Retail">
+                                        City Union Bank - Retail
+                                      </option>
+                                      <option value="Cosmos Bank">
+                                        Cosmos Bank
+                                      </option>
+                                      <option value="DBS Bank Ltd">
+                                        DBS Bank Ltd
+                                      </option>
+                                      <option value="DCB BANK">DCB BANK</option>
+                                      <option value="Deutsche Bank">
+                                        Deutsche Bank
+                                      </option>
+                                      <option value="Dhanlaxmi Bank">
+                                        Dhanlaxmi Bank
+                                      </option>
+                                      <option value="Federal Bank">
+                                        Federal Bank
+                                      </option>
+                                      <option value="IDFC Bank">
+                                        IDFC Bank
+                                      </option>
+                                      <option value="Indian Bank">
+                                        Indian Bank
+                                      </option>
+                                      <option value="Indian Overseas Bank">
+                                        Indian Overseas Bank
+                                      </option>
+                                      <option value="IndusInd Bank">
+                                        IndusInd Bank
+                                      </option>
+                                      <option value="Jammu and Kashmir Bank">
+                                        Jammu and Kashmir Bank
+                                      </option>
+                                      <option value="Jana Small Finance Bank">
+                                        Jana Small Finance Bank
+                                      </option>
+                                      <option value="Janata Sahakari Bank">
+                                        Janata Sahakari Bank
+                                      </option>
+                                      <option value="Karnataka Bank">
+                                        Karnataka Bank
+                                      </option>
+                                      <option value="Karur Vysya Bank">
+                                        Karur Vysya Bank
+                                      </option>
+                                      <option value="Laxmi Vilas Bank - Retail">
+                                        Laxmi Vilas Bank - Retail
+                                      </option>
+                                      <option value="Punjab &amp; Sind Bank">
+                                        Punjab &amp; Sind Bank
+                                      </option>
+                                      <option value="Punjab National Bank">
+                                        Punjab National Bank
+                                      </option>
+                                      <option value="RBL Bank">RBL Bank</option>
+                                      <option value="Saraswat Bank">
+                                        Saraswat Bank
+                                      </option>
+                                      <option
+                                        value="Shamrao Vithal Co-op. Bank Ltd"
+                                      >
+                                        Shamrao Vithal Co-op. Bank Ltd
+                                      </option>
+                                      <option value="South Indian Bank">
+                                        South Indian Bank
+                                      </option>
+                                      <option value="Standard Chartered Bank">
+                                        Standard Chartered Bank
+                                      </option>
+                                      <option
+                                        value="State Bank of Bikaner and Jaipur"
+                                      >
+                                        State Bank of Bikaner and Jaipur
+                                      </option>
+                                      <option value="State Bank of Hyderabad">
+                                        State Bank of Hyderabad
+                                      </option>
+                                      <option value="State Bank of Mysore">
+                                        State Bank of Mysore
+                                      </option>
+                                      <option value="State Bank of Patiala">
+                                        State Bank of Patiala
+                                      </option>
+                                      <option value="State Bank of Travancore">
+                                        State Bank of Travancore
+                                      </option>
+                                      <option
+                                        value="Tamil Nadu State Co-operative Bank"
+                                      >
+                                        Tamil Nadu State Co-operative Bank
+                                      </option>
+                                      <option value="Tamilnad Mercantile Bank">
+                                        Tamilnad Mercantile Bank
+                                      </option>
+                                      <option value="UCO Bank">UCO Bank</option>
+                                      <option value="Union Bank">
+                                        Union Bank
+                                      </option>
+                                      <option value="YES Bank">YES Bank</option>
+                                    </optgroup>
+                                  </select>
+                                  <select
+                                    id="citrusAvailableOptions"
+                                    type="hidden"
+                                    style="display: none"
+                                  >
+                                    <option value=""></option>
+                                  </select>
+                                  <label class="label"
+                                    ><strong>Other Banks</strong></label
+                                  >
+                                </div>
+                                <div class="savecard">
+                                  <strong class="ng-binding">
+                                    Total Payable Amount :
+                                    <i class="fa fa-rupee"></i> 100.00</strong
+                                  >
+                                </div>
+                                <button
+                                  id="btnNetBanking"
+                                  data-ng-click="checkPayment()"
+                                  class="btn load"
+                                  disabled="true"
+                                >
+                                  Pay Now<i
+                                    class="icon fa fa-chevron-circle-right"
+                                  ></i>
+                                </button>
+                              </div>
+                              <div
+                                id="cardlessEmi"
+                                class="leftbox"
+                                style="display: none"
+                              >
+                                <h1>Cardless EMI / Pay Later</h1>
+                                <div
+                                  id="cardlessEmiOptions"
+                                  class="netbankingbx paytmOptions"
+                                >
+                                  <span>
+                                    
+                                  </span>
+                                  <!-- Mintifi Offer -->
+                                  <div
+                                    id="flip-scroll"
+                                    data-ng-show="payLaterOption == 'MintifiOffer'"
+                                    class="ng-hide"
+                                  >
+                                    <table
+                                      id="mintifiemiDetails"
+                                      cellspacing="0"
+                                    >
+                                      <thead class="cf">
+                                        <tr>
+                                          <th>EMI Tenure</th>
+                                          <th style="width: 120px">
+                                            Interest Rate
+                                          </th>
+                                          <th>Monthly Installment</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <!-- ngRepeat: emi in user.mintiOfrs -->
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <button
+                                    data-ng-show="payLaterOption == 'MintifiOffer'"
+                                    data-ng-click="sendmintiOtp()"
+                                    class="btn ng-hide load"
+                                    style="clear: both"
+                                  >
+                                    Submit<i
+                                      class="icon fa fa-chevron-circle-right"
+                                    ></i>
+                                  </button>
+                                </div>
+                                <!-- Mintifi Error -->
+                                <div
+                                  ng-show="user.mintiErr &amp;&amp; payLaterOption == 'MintifiOffer'"
+                                  class="cardlessEmiErr ng-binding ng-hide"
+                                ></div>
+                                <div
+                                  data-ng-show="payLaterOption != 'MintifiOffer'"
+                                >
+                                  <div
+                                    class="savecard"
+                                    style="
+                                      float: left;
+                                      margin-top: 25px;
+                                      margin-bottom: 25px;
+                                    "
+                                  >
+                                    <strong class="ng-binding">
+                                      Total Payable Amount :
+                                      <i class="fa fa-rupee"></i> 100.00</strong
+                                    >
+                                  </div>
+                                  <div
+                                    ng-show="snapmintErr"
+                                    class="cardlessEmiErr ng-binding ng-hide"
+                                  ></div>
+                                  <div
+                                    id="snaperr"
+                                    class="cardlessEmiErr"
+                                  ></div>
+
+                                  <div
+                                    id="lazypayerror"
+                                    class="cardlessEmiErr"
+                                  ></div>
+                                  <div
+                                    ng-show="lazypayErr"
+                                    class="cardlessEmiErr ng-binding ng-hide"
+                                  ></div>
+                                  <div
+                                    ng-show="epaylaterErr"
+                                    class="cardlessEmiErr ng-hide"
+                                  >
+                                    <span
+                                      ng-bind-html="epaylaterErr"
+                                      class="ng-binding"
+                                    ></span>
+                                  </div>
+
+                                  <div
+                                    ng-show="zestmoneyErr"
+                                    class="cardlessEmiErr ng-hide"
+                                  >
+                                    <span
+                                      ng-bind-html="zestmoneyErr"
+                                      class="ng-binding"
+                                    ></span>
+                                  </div>
+
+                                  <button
+                                    id="crdlsemibtn"
+                                    data-ng-click="checkPayment()"
+                                    class="btn"
+                                    ng-disabled="disabled"
+                                    style="clear: both"
+                                  >
+                                    Submit<i
+                                      class="icon fa fa-chevron-circle-right"
+                                    ></i>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <div
+                                class="leftbox"
+                                id="bharatQR"
+                                style="display: none"
+                              >
+                                <h1>Baharat Scan QR</h1>
+                                <div id="bharatqrresponse"></div>
+
+                                <div id="generateQR">
+                                  <div
+                                    id="bharatQROptions"
+                                    class="netbankingbx paytmOptions"
+                                  >
+                                    <span>
+                                      <ul>
+                                        <li
+                                          id="bharatqrli"
+                                          data-ng-click="setbharatQROption('BharatQR')"
+                                        >
+                                          <span>
+                                            <label
+                                              class="css-label radGroup2 left"
+                                              style="
+                                                width: 23px;
+                                                margin-right: 7px;
+                                              "
+                                              >&nbsp;</label
+                                            >
+                                            <span class=""
+                                              ><img
+                                                src="https://pay.imimg.com/img/pwim/bharatqrimg.png"
+                                                style="
+                                                  float: left;
+                                                  height: 25px;
+                                                "
+                                            /></span>
+                                          </span>
+                                        </li>
+                                      </ul>
+                                    </span>
+                                  </div>
+                                  <div
+                                    class="savecard"
+                                    style="
+                                      float: left;
+                                      margin-top: 25px;
+                                      margin-bottom: 25px;
+                                    "
+                                  >
+                                    <strong class="ng-binding">
+                                      Total Payable Amount :
+                                      <i class="fa fa-rupee"></i> 100.00</strong
+                                    >
+                                  </div>
+
+                                  <div
+                                    ng-show="bharatqrErr"
+                                    class="bharatqrpgErr ng-binding ng-hide"
+                                  ></div>
+                                  <button
+                                    data-ng-click="checkPayment()"
+                                    class="btn"
+                                    ng-disabled="bharatqrErr"
+                                    style="clear: both"
+                                  >
+                                    Generate QR<i
+                                      class="icon fa fa-chevron-circle-right"
+                                      style="left: -24px"
+                                    ></i>
+                                  </button>
+                                </div>
+                              </div>
+                              <!-- Minitifi Options-->
+                              <div
+                                id="mintifiBox"
+                                class="leftbox"
+                                style="min-height: 280px; display: none"
+                              >
+                                <!-- ngIf: user.isShowLnUsr == 'N' && mintifiactive == 'active' -->
+                                <!-- ngIf: user.mintiOfrlnth > 0 && user.isShowLnUsr == 'Y' -->
+                                <!-- Mintifi Error -->
+                                <div
+                                  ng-show="user.mintiErr"
+                                  class="cardlessEmiErr ng-binding ng-hide"
+                                ></div>
+                              </div>
+                              <!--UPI Options-->
+                              <div
+                                id="payuUPI"
+                                class="leftbox"
+                                style="background: rgb(246, 246, 246)"
+                              >
+                                <h1 class="ng-binding">Scan &amp; Pay</h1>
+
+                                <div id="firstupi_block" style="display: none">
+                                  <div
+                                    style="
+                                      clear: both;
+                                      text-align: center;
+                                      margin-top: -40px;
+                                    "
+                                  >
+                                    <span
+                                      data-ng-click="setUpiAppOption('iciciUpi')"
+                                    >
+                                      <div
+                                        class="btn"
+                                        style="
+                                          clear: both;
+                                          height: 35px;
+                                          line-height: 35px;
+                                          font-size: 14px;
+                                          width: 20%;
+                                          position: relative;
+                                          top: 90px;
+                                          z-index: 9;
+                                          border-radius: 0px;
+                                        "
+                                      >
+                                        Show UPI QR
+                                      </div>
+                                      <img
+                                        src="/assets/image/xxx.jpeg"
+                                        style="
+                                          border: 1px solid;
+                                          padding: 5px 0;
+                                          margin-top: 4px;
+                                        "
+                                      />
+                                    </span>
+                                  </div>
+                                </div>
+
+                                <div
+                                  id="upiqrsection"
+                                  style="
+                                    display: block;
+                                    padding-top: 10px;
+                                    clear: both;
+                                    text-align: center;
+                                  "
+                                >
+                                  <span
+                                    id="backupi_block"
+                                    data-ng-click="backToUpi()"
+                                    style="
+                                      color: #000;
+                                      position: relative;
+                                      margin-top: -65px;
+                                      font-size: 15px;
+                                      cursor: pointer;
+                                      padding: 5px;
+                                      border-radius: 4px;
+                                      float: left;
+                                    "
+                                    >
+
+                                    <a style="color: black; text-decoration: none;" href="https://seller.indiamart.com">Go Back</a>
+                                    </span
+                                  >
+
+                                  <img
+                                    style="
+                                      display: block;
+                                      height: 174px;
+                                      position: relative;
+                                      margin: auto;
+                                      top: -27px;
+                                    "
+                                    id="qrimg"
+                                    src="./assets/image/xxx.jpeg"
+                                  />
+
+                                  <br />
+                                  <div
+                                    style="display: block; text-align: center"
+                                    id="chckstatus_block"
+                                  >
+                                    <div
+                                      style="margin: auto; line-height: 20px"
+                                    >
+                                      <span><b>Steps for Payment</b></span>
+                                      <p>
+                                        1. Scan the QR code with your favorite
+                                        UPI App
+                                      </p>
+                                      <p>
+                                        2. Accept payment request for this
+                                        transaction
+                                      </p>
+                                      <p>
+                                        3. Approve payment request by entering
+                                        your UPI PIN
+                                      </p>
+                                      <p>
+                                        4. Wait for a few seconds while we
+                                        confirm the payment
+                                      </p>
+                                    </div>
+                                  </div>
+
+                                  <span
+                                    style="font-weight: bold"
+                                    id="status_msg"
+                                  ></span>
+                                  <br />
+                                  <button
+                                    id="chckstatusbutton"
+                                    data-ng-click="checkUpiQrStatus('qr')"
+                                    class="btn"
+                                    style="display: none; clear: both"
+                                  >
+                                    Check Payment Status
+                                  </button>
+                                </div>
+
+                                <div
+                                  id="upicollectsection"
+                                  style="
+                                    display: none;
+                                    padding-top: 10px;
+                                    clear: both;
+                                    text-align: center;
+                                  "
+                                >
+                                  <span
+                                    id="backcollect_block"
+                                    data-ng-click="backToUpi()"
+                                    style="
+                                      color: #000;
+                                      position: relative;
+                                      margin-top: -50px;
+                                      font-size: 15px;
+                                      cursor: pointer;
+                                      padding: 5px;
+                                      border-radius: 4px;
+                                      float: left;
+                                    "
+                                    ><i
+                                      class="fa fa-arrow-circle-left"
+                                      style="font-size: 20px"
+                                    ></i>
+                                    Go Back</span
+                                  >
+
+                                  <div
+                                    style="text-align: center"
+                                    id="chckstatus_block_c"
+                                  >
+                                    <span
+                                      style="font-weight: bold"
+                                      class="ng-binding"
+                                      >Payment Request Sent To </span
+                                    ><span
+                                      data-ng-click="backToUpi(1)"
+                                      style="
+                                        font-weight: bold;
+                                        color: blue;
+                                        text-decoration: underline;
+                                        margin-left: 10px;
+                                      "
+                                      >Resend Request</span
+                                    >
+                                    <br /><br />
+                                    <div
+                                      style="margin: auto; line-height: 20px"
+                                    >
+                                      <span><b>Steps for Payment</b></span>
+                                      <p class="ng-binding">
+                                        1. Open your UPI App for
+                                      </p>
+                                      <p>
+                                        2. Accept payment request for this
+                                        transaction
+                                      </p>
+                                      <p>
+                                        3. Approve payment request by entering
+                                        your UPI PIN
+                                      </p>
+                                      <p>
+                                        4. Wait for a few seconds while we
+                                        confirm the payment
+                                      </p>
+                                    </div>
+                                  </div>
+
+                                  <span
+                                    style="font-weight: bold"
+                                    id="status_msg_c"
+                                  ></span>
+                                  <br />
+                                  <button
+                                    id="chckstatusbutton_c"
+                                    data-ng-click="checkUpiQrStatus('collect')"
+                                    class="btn"
+                                    style="display: none; clear: both"
+                                  >
+                                    Check Payment Status
+                                  </button>
+                                </div>
+
+                                <img
+                                  style="
+                                    height: 70px;
+                                    margin: 20px 0px -15px 73px;
+                                    width: 73%;
+                                  "
+                                  src="https://pay.imimg.com/img/UPI-flow-Page-5.png"
+                                />
+
+                                <div
+                                  id="upivpa_block"
+                                  style="
+                                    text-align: left;
+                                    padding: 0px;
+                                    width: 98%;
+                                    min-height: 180px;
+                                    display: none;
+                                  "
+                                >
+                                  <br />
+                                  <p style="text-align: center"><b>OR</b></p>
+
+                                  <div
+                                    id="upi_vpa"
+                                    style="
+                                      float: left;
+                                      width: 378px;
+                                      margin-left: 81px;
+                                    "
+                                  >
+                                    <div
+                                      style="
+                                        font-weight: 700;
+                                        text-align: center;
+                                        line-height: 40px;
+                                      "
+                                    >
+                                      <label>Enter Your UPI ID Here</label>
+                                    </div>
+                                    <div
+                                      class="fl-l"
+                                      style="
+                                        display: block;
+                                        color: red;
+                                        margin-left: 38px;
+                                      "
+                                    >
+                                      <input
+                                        type="text"
+                                        placeholder="username@upi"
+                                        class="
+                                          input-si
+                                          ng-pristine ng-untouched ng-valid
+                                        "
+                                        data-ng-model="user.vpa"
+                                      />
+                                    </div>
+                                    <div class="cl-r"></div>
+                                    <span
+                                      class="err"
+                                      id="upiErrorMsg1"
+                                      style="
+                                        display: block;
+                                        color: red;
+                                        padding-top: 15px;
+                                        margin-left: 38px;
+                                      "
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="savecard"
+                                    style="
+                                      float: left;
+                                      margin-bottom: 25px;
+                                      width: 95%;
+                                    "
+                                  >
+                                    <strong class="ng-binding">
+                                      Total Payable Amount :
+                                      <i class="fa fa-rupee"></i>100.00</strong
+                                    >
+                                  </div>
+                                  <button
+                                    data-ng-show="user.vpa"
+                                    id="btnUPIApp"
+                                    data-ng-click="checkPayment()"
+                                    class="btn ng-hide"
+                                    style="clear: both"
+                                  >
+                                    Pay Now<i
+                                      class="icon fa fa-chevron-circle-right"
+                                    ></i>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <!--Wallet Options-->
+                              <div
+                                id="payuWallet"
+                                class="leftbox"
+                                style="display: none"
+                              >
+                                <!-- <div class="leftbox" data-ng-if="(user.amount - amountLimit > 0) && paytmwalletactive" style="text-align: center;font-size: 16px;">
+                                                        Supplier's limit to accept wallet payment has exceeded.
+                                                    </div> -->
+                                <h1>Wallet</h1>
+                                <div
+                                  id="walletOption"
+                                  class="netbankingbx paytmOptions"
+                                >
+                                  <span>
+                                    <ul>
+                                      <!-- ngIf: (user.amount <= amountLimit) -->
+                                      <li
+                                        data-ng-if="(user.amount <= amountLimit)"
+                                        id="PPI"
+                                        data-ng-click="setPaytmWalletOption('PPI')"
+                                        data-ng-show="user.amount <= 100000"
+                                        class="ng-scope"
+                                      >
+                                        <span>
+                                          <label
+                                            class="css-label radGroup2 left"
+                                            >&nbsp;</label
+                                          >
+                                          <span class=""
+                                            ><img
+                                              src="https://pay.imimg.com/img/paytm_v1.png"
+                                              style="float: left; height: 25px"
+                                          /></span>
+                                        </span>
+                                      </li>
+                                      <!-- end ngIf: (user.amount <= amountLimit) -->
+                                      <!--<li data-ng-if="(user.amount <= amountLimit)" id="phonepeUpi" data-ng-click="setPaytmWalletOption('phonepeUpi')" data-ng-show="user.amount <= 100000">
+                                                                    <span> <label class="css-label radGroup2 left" style="margin-right:7px;width :22px;height :23px"></label> <span class="">
+
+                                                                            <img src="https://pay.imimg.com/img/pwim/phonepe1.png" style="float:left;height:25px;width:75px">
+
+                                                                        </span></span>
+                                                                </li>-->
+                                      <!--<li data-ng-if="(user.amount <= amountLimit)" id="AmazPay" data-ng-click="setPaytmWalletOption('AmazPay')" data-ng-show="user.amount <= 100000">
+                                                                    <span> <label class="css-label radGroup2 left" style="margin-right:7px;width :22px;height :23px"></label> <span class="">
+
+
+                                                                            <img alt="AmazonPay" src="https://pay.imimg.com/img/Amazon_pay_v1.jpg" style="float:left;height:25px;"> 
+
+                                                                        </span>									</span>
+                                                                </li>-->
+                                      <!-- ngIf: (user.amount <= amountLimit) -->
+                                      <li
+                                        data-ng-if="(user.amount <= amountLimit)"
+                                        id="WALLET"
+                                        data-ng-click="setPaytmWalletOption('WALLET')"
+                                        class="ng-scope"
+                                      >
+                                        <span>
+                                          <label
+                                            class="css-label radGroup2 left"
+                                            >&nbsp;</label
+                                          >
+                                          <span class=""
+                                            ><img
+                                              src="https://pay.imimg.com/img/PayUMoneyLogo.png"
+                                              style="float: left; height: 25px"
+                                          /></span>
+                                        </span>
+                                      </li>
+                                      <!-- end ngIf: (user.amount <= amountLimit) -->
+                                      <!--<li data-ng-if="(user.amount <= amountLimit)" id="Mobikwik" data-ng-click="setPaytmWalletOption('Mobikwik')" data-ng-show="user.amount <= 100000">
+                                                                    <span> <label class="css-label radGroup2 left" >&nbsp;</label> <span class=""><img src="https://pay.imimg.com/img/mobikwik.png" style="float:left;height:25px;"></span>                                                        </span>
+                                                                </li>
+                                                                <li data-ng-if="(user.amount <= amountLimit)" id="freecharge" data-ng-click="setPaytmWalletOption('freecharge')" data-ng-show="user.amount <= 100000">
+                                                                    <span> <label class="css-label radGroup2 left" >&nbsp;</label> <span class=""><img src="https://pay.imimg.com/img/fc-orange-logo.png" style="float:left;height:25px;"></span>                                                        </span>
+                                                                </li>
+                                                                
+                                                                <li data-ng-if="(user.amount <= amountLimit)" id="itz" data-ng-click="setPaytmWalletOption('itz')" data-ng-show="user.amount <= 100000">
+                                                                    <span> <label class="css-label radGroup2 left" >&nbsp;</label> <span class=""><img src="https://pay.imimg.com/img/itzcash.png" style="float:left;height:25px;"></span>                                                        </span>
+                                                                </li>
+                                                                <li data-ng-if="(user.amount <= amountLimit)" id="icash" data-ng-click="setPaytmWalletOption('icash')" data-ng-show="user.amount <= 100000">
+                                                                    <span> <label class="css-label radGroup2 left" >&nbsp;</label> <span class=""><img src="https://pay.imimg.com/img/icc_v1.png" style="float:left;height:25px;"></span>                                                        </span>
+                                                                </li>
+                                                                <li data-ng-if="(user.amount <= amountLimit)" id="jioMoney" data-ng-click="setPaytmWalletOption('jioMoney')" data-ng-show="user.amount <= 100000">
+                                                                    <span> <label class="css-label radGroup2 left" >&nbsp;</label> <span class=""><img src="https://pay.imimg.com/img/jioMoney.png" style="float:left;height:25px;"></span>                                                        </span>
+                                                                </li>-->
+                                      <!-- ngIf: (user.amount <= amountLimit && (user.supplier_glid == 19072358 || user.supplier_glid == 6601433)) -->
+                                      <!-- ngIf: (user.amount <= amountLimit && (user.supplier_glid == 19072358 || user.supplier_glid == 6601433)) -->
+                                      <!-- ngIf: (user.amount <= amountLimit && (user.supplier_glid == 19072358 || user.supplier_glid == 6601433)) -->
+                                    </ul>
+                                  </span>
+                                </div>
+
+                                <button
+                                  id="btnWalletApp"
+                                  data-ng-click="checkPayment()"
+                                  class="btn"
+                                  style="clear: both"
+                                  disabled="true"
+                                >
+                                  Pay Now<i
+                                    class="icon fa fa-chevron-circle-right"
+                                  ></i>
+                                </button>
+                              </div>
+
+                              <!-- ATM-cum Debit Card -->
+                              <div
+                                class="leftbox"
+                                id="atmpin"
+                                style="display: none"
+                              >
+                                <h1>ATM-cum-Debit Card</h1>
+                                <div id="netbankingbx" class="netbankingbx">
+                                  <select
+                                    id="atmBankName"
+                                    class="
+                                      select-option
+                                      ng-pristine
+                                      ng-untouched
+                                      ng-invalid
+                                      ng-invalid-required
+                                    "
+                                    data-ng-model="user.atmBank"
+                                    required=""
+                                    style="color: #333"
+                                  >
+                                    <option
+                                      disabled=""
+                                      value=""
+                                      selected="selected"
+                                    >
+                                      -- Select Bank --
+                                    </option>
+                                    <!-- ngRepeat: atmBank in user.atmBanks -->
+                                    <option
+                                      data-ng-repeat="atmBank in user.atmBanks"
+                                      value="AB"
+                                      style="cursor: pointer"
+                                      ng-hide="atmBank.name == 'Canara Bank Debit card' || atmBank.name == 'Union Bank Of India' || atmBank.name == 'Punjab National Bank'"
+                                      class="ng-binding ng-scope"
+                                    >
+                                      Andhra Bank
+                                    </option>
+                                    <!-- end ngRepeat: atmBank in user.atmBanks -->
+                                    <option
+                                      data-ng-repeat="atmBank in user.atmBanks"
+                                      value="CANB"
+                                      style="cursor: pointer"
+                                      ng-hide="atmBank.name == 'Canara Bank Debit card' || atmBank.name == 'Union Bank Of India' || atmBank.name == 'Punjab National Bank'"
+                                      class="ng-binding ng-scope ng-hide"
+                                    >
+                                      Canara Bank Debit card
+                                    </option>
+                                    <!-- end ngRepeat: atmBank in user.atmBanks -->
+                                    <option
+                                      data-ng-repeat="atmBank in user.atmBanks"
+                                      value="CITIB"
+                                      style="cursor: pointer"
+                                      ng-hide="atmBank.name == 'Canara Bank Debit card' || atmBank.name == 'Union Bank Of India' || atmBank.name == 'Punjab National Bank'"
+                                      class="ng-binding ng-scope"
+                                    >
+                                      Citibank
+                                    </option>
+                                    <!-- end ngRepeat: atmBank in user.atmBanks -->
+                                    <option
+                                      data-ng-repeat="atmBank in user.atmBanks"
+                                      value="IOB"
+                                      style="cursor: pointer"
+                                      ng-hide="atmBank.name == 'Canara Bank Debit card' || atmBank.name == 'Union Bank Of India' || atmBank.name == 'Punjab National Bank'"
+                                      class="ng-binding ng-scope"
+                                    >
+                                      IOB Debit card
+                                    </option>
+                                    <!-- end ngRepeat: atmBank in user.atmBanks -->
+                                    <option
+                                      data-ng-repeat="atmBank in user.atmBanks"
+                                      value="PNB"
+                                      style="cursor: pointer"
+                                      ng-hide="atmBank.name == 'Canara Bank Debit card' || atmBank.name == 'Union Bank Of India' || atmBank.name == 'Punjab National Bank'"
+                                      class="ng-binding ng-scope ng-hide"
+                                    >
+                                      Punjab National Bank
+                                    </option>
+                                    <!-- end ngRepeat: atmBank in user.atmBanks -->
+                                    <option
+                                      data-ng-repeat="atmBank in user.atmBanks"
+                                      value="UBI"
+                                      style="cursor: pointer"
+                                      ng-hide="atmBank.name == 'Canara Bank Debit card' || atmBank.name == 'Union Bank Of India' || atmBank.name == 'Punjab National Bank'"
+                                      class="ng-binding ng-scope ng-hide"
+                                    >
+                                      Union Bank Of India
+                                    </option>
+                                    <!-- end ngRepeat: atmBank in user.atmBanks -->
+                                  </select>
+                                  <label class="label"
+                                    ><strong>Select Bank</strong></label
+                                  >
+                                </div>
+                                <div class="savecard">
+                                  <strong class="ng-binding">
+                                    Total Payable Amount :
+                                    <i class="fa fa-rupee"></i> 100.00</strong
+                                  >
+                                </div>
+                                <button
+                                  data-ng-click="checkPayment()"
+                                  class="btn load"
+                                  data-ng-disabled="!user.atmBank || form.uAmount.$invalid"
+                                  disabled="disabled"
+                                >
+                                  Pay Now<i
+                                    class="icon fa fa-chevron-circle-right"
+                                  ></i>
+                                </button>
+                              </div>
+                            </div>
+                            <!-- Debit Card EMI -->
+                            <!-- ngIf: (user.amount >= 5000) && emidebitactive == 'active' -->
+                            <!-- Credit card emi options -->
+                            <!-- ngIf: (user.amount > 3000) && !(user.amount - amountLimit > 0) && emiactive == 'active' -->
+                            <!-- ngIf: (user.amount - amountLimit > 0) && emiactive == 'active' -->
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </form>
+
+                <div id="payuResponse" style="display: none"></div>
+                <div id="paytmFrm"></div>
+                <form
+                  name="QuickPay"
+                  id="QuickPay"
+                  action=""
+                  method="GET"
+                  class="ng-pristine ng-valid"
+                >
+                  <input type="hidden" name="QuickPay_Salute" value="Mr." />
+
+                  <!-- ngIf: user.firstname != '' --><input
+                    type="hidden"
+                    data-ng-if="user.firstname != ''"
+                    name="QuickPay_FirstName"
+                    value="Venkateshwara"
+                    class="ng-scope"
+                  /><!-- end ngIf: user.firstname != '' -->
+                  <!-- ngIf: user.firstname == '' -->
+
+                  <!-- ngIf: user.lastname != '' --><input
+                    type="hidden"
+                    data-ng-if="user.lastname != ''"
+                    name="QuickPay_LastName"
+                    value=""
+                    class="ng-scope"
+                  /><!-- end ngIf: user.lastname != '' -->
+                  <!-- ngIf: user.lastname == '' -->
+                  <input type="hidden" name="QuickPay_Company" value="" />
+                  <input type="hidden" name="QuickPay_Address" value="" />
+                  <input type="hidden" name="QuickPay_City" value="" />
+                  <input type="hidden" name="QuickPay_State" value="" />
+                  <input type="hidden" name="QuickPay_Zip" value="" />
+                  <input type="hidden" name="QuickPay_Country" value="" />
+                  <!-- ngIf: user.email == 'pay@indiamart.com' -->
+                  <!-- ngIf: user.email != 'pay@indiamart.com' --><input
+                    data-ng-if="user.email != 'pay@indiamart.com'"
+                    type="hidden"
+                    name="QuickPay_Email"
+                    value="a*****************@gmail.com"
+                    class="ng-scope"
+                  /><!-- end ngIf: user.email != 'pay@indiamart.com' -->
+                  <input
+                    type="hidden"
+                    name="QuickPay_Mobile"
+                    value="9775546851"
+                  />
+
+                  <input
+                    type="hidden"
+                    name="QuickPay_Credit_Salute"
+                    value="Mr."
+                  />
+                  <input
+                    type="hidden"
+                    name="QuickPay_Credit_FirstName"
+                    value="Venkateshwara"
+                  />
+
+                  <!-- ngIf: user.lastname != '' --><input
+                    type="hidden"
+                    data-ng-if="user.lastname != ''"
+                    name="QuickPay_Credit_LastName"
+                    value=""
+                    class="ng-scope"
+                  /><!-- end ngIf: user.lastname != '' -->
+                  <!-- ngIf: user.lastname == '' -->
+
+                  <input
+                    type="hidden"
+                    name="QuickPay_Credit_Company"
+                    value=""
+                  />
+                  <input
+                    type="hidden"
+                    name="QuickPay_Credit_Address"
+                    value=""
+                  />
+                  <input type="hidden" name="QuickPay_Credit_City" value="" />
+                  <input type="hidden" name="QuickPay_Credit_State" value="" />
+                  <input type="hidden" name="QuickPay_Credit_Zip" value="" />
+                  <input
+                    type="hidden"
+                    name="QuickPay_Credit_Country"
+                    value=""
+                  />
+                  <!-- ngIf: user.email != 'pay@indiamart.com' --><input
+                    data-ng-if="user.email != 'pay@indiamart.com'"
+                    type="hidden"
+                    name="QuickPay_Credit_Email"
+                    value="a*****************@gmail.com"
+                    class="ng-scope"
+                  /><!-- end ngIf: user.email != 'pay@indiamart.com' -->
+                  <!-- ngIf: user.email == 'pay@indiamart.com' -->
+                  <input
+                    type="hidden"
+                    name="QuickPay_Credit_Mobile"
+                    value="9775546851"
+                  />
+
+                  <!-- hidden parameters for amount emi -->
+                  <input type="hidden" name="price0" value="100.00" />
+                  <span ng-switch="" on="user.services">
+                    <!-- if user select other service from drop down then send only other service name -->
+                    <!-- ngSwitchWhen: Other Service -->
+                    <!-- else send selected service --><!-- ngSwitchDefault:  --><span
+                      ng-switch-default=""
+                      class="ng-scope"
+                    >
+                      <input type="hidden" name="desc0" value="oil" />
+                      <input
+                        type="hidden"
+                        name="QuickPay_OrderDetails"
+                        value="oil"
+                      /> </span
+                    ><!-- end ngSwitchWhen: -->
+                  </span>
+
+                  <input type="hidden" name="bankList" value="" />
+                  <input type="hidden" name="emi" value="" />
+
+                  <!-- extra parameters -->
+                  <input type="hidden" name="isFromMobile" value="false" />
+                  <input type="hidden" name="merchanttxn" value="" />
+                  <input type="hidden" name="fromsite" value="PAYWIM" />
+                  <input type="hidden" name="Cname" value="Venkateshwara" />
+                  <!-- ngIf: user.email == 'pay@indiamart.com' -->
+                  <!-- ngIf: user.email != 'pay@indiamart.com' --><input
+                    data-ng-if="user.email != 'pay@indiamart.com'"
+                    type="hidden"
+                    name="emailId"
+                    value="a*****************@gmail.com"
+                    class="ng-scope"
+                  /><!-- end ngIf: user.email != 'pay@indiamart.com' -->
+                  <input type="hidden" name="mobile" value="9775546851" />
+                  <input type="hidden" name="billingAddress" value="" />
+                  <input type="hidden" name="custAddress" value="" />
+                  <input type="hidden" name="QuickPay_Amount" value="100.00" />
+                  <input type="hidden" name="GL_ID" value="134044732" />
+                  <input type="hidden" name="orderid" value="" />
+                  <input type="hidden" name="QuickPay_Currency" value="4" />
+                  <input type="hidden" name="CheckBox1" value="1" />
+                  <input
+                    type="hidden"
+                    name="QuickPay_Email_Alternate"
+                    value=""
+                  />
+                  <input type="hidden" name="Pay_Type" value="" />
+                  <input type="hidden" name="QuickPay_Ph_Country" value="91" />
+
+                  <input type="hidden" name="QuickPay_Ph_Area" value="" />
+                  <input type="hidden" name="QuickPay_Phone_No" value="" />
+                  <input type="hidden" name="QuickPay_Fax_Country" value="" />
+                  <input type="hidden" name="QuickPay_Fax_Area" value="" />
+                  <input type="hidden" name="QuickPay_Fax_No" value="" />
+
+                  <input type="hidden" name="Action" value="Update" />
+                </form>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="voucherContainer ng-scope ng-hide"
+          data-ng-show="mintiotpbox"
+        >
+          <div
+            style="
+              display: table-cell;
+              height: 100vh;
+              width: 100vw;
+              vertical-align: middle;
+            "
+          >
+            <div class="voucherBox animated zoomIn">
+              <div
+                style="
+                  font-size: 20px;
+                  padding: 15px;
+                  background: #2e3192;
+                  color: #fff;
+                "
+              >
+                Verify Your Mobile Number
+              </div>
+              <span
+                data-ng-click="hideOtpBox()"
+                style="
+                  position: absolute;
+                  margin-top: -53px;
+                  margin-left: 436px;
+                  background: #dde5ff;
+                  width: 14px;
+                  color: #6c8aea;
+                  text-align: center;
+                  cursor: pointer;
+                "
+                >x</span
+              >
+              <div
+                style="
+                  margin-bottom: 10px;
+                  font-size: 13px;
+                  color: #131313;
+                  padding: 15px;
+                "
+              >
+                4 digit One Time Password SMS sent on your mobile
+                <b class="ng-binding">+91-9775546851</b> <br /><br />
+                <img
+                  src="https://pay.imimg.com/img/pwim/mob_ico.png"
+                  style="float: left; margin-top: -8px"
+                />
+                <input
+                  type="text"
+                  data-ng-model="user.otpCode"
+                  class="ng-pristine ng-untouched ng-valid"
+                />
+                <button data-ng-click="applyOtp()">Verify</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            text-align: center;
+            padding: 18px 0;
+            font-size: 12px;
+            color: #5d5d5d;
+            position: relative;
+            text-align: center; /* width: 100%; */
+            border-top: 1px solid #ccc;
+            display: block;
+            bottom: 0;
+            width: 100%;
+            bottom: 0;
+            background: #ececec;
+            margin-top: 40px;
+          "
+          class="ng-scope"
+        >
+          For any assistance or queries call us at 9696969696 or mail us at
+          <a href="mailto:paywith@indiamart.com" style="color: #5d5d5d"
+            >paywith@indiamart.com
+          </a>
+        </div>
+
+        <!-- Footer -->
+      </div>
+    </div>
+
+    <script>
+      readCookie = function (name) {
+        var search = name + "=";
+        if (document.cookie.length > 0) {
+          offset = document.cookie.indexOf(search);
+          if (offset != -1) {
+            offset += search.length;
+            end = document.cookie.indexOf(";", offset);
+            if (end == -1) end = document.cookie.length;
+            return unescape(document.cookie.substring(offset, end));
+          }
+        }
+
+        return "";
+      };
+      function redirectLoc(loc) {
+        setTimeout(function () {
+          window.location.href = loc;
+        }, 3000);
+      }
+      function closePop() {
+        $("#popup1").hide();
+      }
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://pay.imimg.com/pwim/css/e4381947.invoice.min.css"
+      onload="document.body.style.display = '' "
+    />
+  </body>
+</html>
